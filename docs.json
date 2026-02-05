@@ -21,7 +21,14 @@
     "groups": [
       {
         "group": "使用指南",
-        "pages": []
+        "pages": [
+          {
+            "group": "开始使用",
+            "pages": [
+              "file"
+            ]
+          }
+        ]
       }
     ]
   },
