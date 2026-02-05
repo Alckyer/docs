@@ -24,8 +24,11 @@
       },
       {
         "tab": "API文档",
-        "pages": [
-          "api/introduction"
+        "groups": [
+          {
+            "group": "模型API",
+            "pages": []
+          }
         ]
       },
       {
