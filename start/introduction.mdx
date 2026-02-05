@@ -1,6 +1,8 @@
 ---
 title: "平台介绍"
+description: "FCLOUD API · 一站式大模型开发平台"
 ---
+
 # 快速开始
 
 <Tip>
@@ -17,19 +19,16 @@ title: "平台介绍"
       ![注册账号](https://cdn.bigmodel.cn/static/logo/register.png)
     </Frame>
   </Step>
-
   <Step title="获取API Key">
     登录后，在个人中心页面，点击 [API Keys](https://bigmodel.cn/usercenter/proj-mgmt/apikeys)，创建一个新的 API Key。
 
     <Warning>
       请妥善保管您的 API Key，不要泄露给他人，也不要直接硬编码在代码中。建议使用环境变量或配置文件来存储 API Key。
     </Warning>
-
     <Frame>
       ![获取 API Key](https://cdn.bigmodel.cn/static/logo/api-key.png)
     </Frame>
   </Step>
-
   <Step title="选择模型">
     平台提供多种模型，您可以根据自己的需求选择合适的模型。详细的模型介绍请参考[模型概况](/cn/guide/start/model-overview)。
 
@@ -37,21 +36,17 @@ title: "平台介绍"
       <Card title="GLM-4.7" icon={<svg style={{maskImage: "url(/resource/icon/book-open.svg)", maskRepeat: "no-repeat", maskPosition: "center center",}} className={"h-6 w-6 bg-primary dark:bg-primary-light !m-0 shrink-0"}/>} href="/cn/guide/models/text/glm-4.7">
         通用旗舰大语言模型
       </Card>
-
       <Card title="GLM-4.6V" icon={<svg style={{maskImage: "url(/resource/icon/eye.svg)", maskRepeat: "no-repeat", maskPosition: "center center",}} className={"h-6 w-6 bg-primary dark:bg-primary-light !m-0 shrink-0"}/>} href="/cn/guide/models/vlm/glm-4.6v">
         最新一代基于 MOE 架构的视觉推理模型
       </Card>
-
       <Card title="GLM-Image" icon={<svg style={{maskImage: "url(/resource/icon/image.svg)", maskRepeat: "no-repeat", maskPosition: "center center",}} className={"h-6 w-6 bg-primary dark:bg-primary-light !m-0 shrink-0"}/>} href="/cn/guide/models/image-generation/glm-image">
         图像生成模型，文字渲染更稳更准
       </Card>
-
       <Card title="CogVideoX-3" icon={<svg style={{maskImage: "url(/resource/icon/video.svg)", maskRepeat: "no-repeat", maskPosition: "center center",}} className={"h-6 w-6 bg-primary dark:bg-primary-light !m-0 shrink-0"}/>} href="/cn/guide/models/video-generation/cogvideox-3">
         视频生成模型，新增首尾帧生成
       </Card>
     </CardGroup>
   </Step>
-
   <Step title="选择开发方式">
     平台提供多种开发方式，您可以根据项目需求和技术栈选择最适合的方式：
 
@@ -59,21 +54,17 @@ title: "平台介绍"
       <Card title="HTTP API" icon={<svg style={{maskImage: "url(/resource/icon/globe.svg)", maskRepeat: "no-repeat", maskPosition: "center center",}} className={"h-6 w-6 bg-primary dark:bg-primary-light !m-0 shrink-0"}/>} href="/cn/guide/develop/http/introduction">
         标准 RESTful API，支持所有编程语言和开发框架
       </Card>
-
       <Card title="Python SDK" icon={<svg style={{maskImage: "url(/resource/icon/python.svg)", maskRepeat: "no-repeat", maskPosition: "center center",}} className={"h-6 w-6 bg-primary dark:bg-primary-light !m-0 shrink-0"}/>} href="/cn/guide/develop/python/introduction">
         官方 Python 开发工具包，提供完整的类型提示和异步支持
       </Card>
-
       <Card title="Java SDK" icon={<svg style={{maskImage: "url(/resource/icon/java.svg)", maskRepeat: "no-repeat", maskPosition: "center center",}} className={"h-6 w-6 bg-primary dark:bg-primary-light !m-0 shrink-0"}/>} href="/cn/guide/develop/java/introduction">
         企业级 Java 开发工具包，支持高并发和高可用性
       </Card>
-
       <Card title="API 参考文档" icon={<svg style={{maskImage: "url(/resource/icon/book.svg)", maskRepeat: "no-repeat", maskPosition: "center center",}} className={"h-6 w-6 bg-primary dark:bg-primary-light !m-0 shrink-0"}/>} href="/cn/api/introduction">
         完整的 API 接口文档和参数说明
       </Card>
     </CardGroup>
   </Step>
-
   <Step title="发起调用">
     准备好 `API Key` 和选择模型后，您可以开始发起调用。以下是使用 `curl` 和 `Python SDK` `Java SDK` 的示例：
 
@@ -81,12 +72,11 @@ title: "平台介绍"
       <Tab title="cURL">
         <Warning>
           注意：使用 [GLM 编码套餐](/cn/coding-plan/overview) 时，需要配置专属的 \
-          Coding 端点 - [https://open.bigmodel.cn/api/coding/paas/v4](https://open.bigmodel.cn/api/coding/paas/v4) \
-          而非通用端点 - [https://open.bigmodel.cn/api/paas/v4/](https://open.bigmodel.cn/api/paas/v4/) \
+          Coding 端点 - https://open.bigmodel.cn/api/coding/paas/v4 \
+          而非通用端点 - https://open.bigmodel.cn/api/paas/v4/ \
           注意：Coding API 端点仅限 Coding 场景，并不适用通用 API 场景，请区分使用。
         </Warning>
-
-        ```bash  theme={null}
+        ```bash
         curl -X POST "https://open.bigmodel.cn/api/paas/v4/chat/completions" \
         -H "Content-Type: application/json" \
         -H "Authorization: Bearer YOUR_API_KEY" \
@@ -107,33 +97,32 @@ title: "平台介绍"
         }'
         ```
       </Tab>
-
       <Tab title="Python SDK">
         **安装 SDK**
 
-        ```bash  theme={null}
+        ```bash
         # 安装最新版本
         pip install zai-sdk
-
+        
         # 或指定版本
         pip install zai-sdk==0.2.2
         ```
 
         **验证安装**
 
-        ```python  theme={null}
+        ```python
         import zai
         print(zai.__version__)
         ```
 
         **使用示例**
 
-        ```python  theme={null}
+        ```python
         from zai import ZhipuAiClient
-
+        
         # 初始化客户端
         client = ZhipuAiClient(api_key="YOUR_API_KEY")
-
+        
         # 创建聊天完成请求
         response = client.chat.completions.create(
             model="glm-4.7",
@@ -149,18 +138,17 @@ title: "平台介绍"
             ],
             temperature=0.6
         )
-
+        
         # 获取回复
         print(response.choices[0].message.content)
         ```
       </Tab>
-
       <Tab title="Java SDK">
         **安装 SDK**
 
         **Maven**
 
-        ```xml  theme={null}
+        ```xml
         <dependency>
             <groupId>ai.z.openapi</groupId>
             <artifactId>zai-sdk</artifactId>
@@ -170,24 +158,24 @@ title: "平台介绍"
 
         **Gradle (Groovy)**
 
-        ```groovy  theme={null}
+        ```groovy
         implementation 'ai.z.openapi:zai-sdk:0.3.3'
         ```
 
         **使用示例**
 
-        ```java  theme={null}
+        ```java
         import ai.z.openapi.ZhipuAiClient;
         import ai.z.openapi.service.model.*;
         import java.util.Arrays;
-
+        
         public class QuickStart {
             public static void main(String[] args) {
                 // 初始化客户端
                 ZhipuAiClient client = ZhipuAiClient.builder().ofZHIPU()
                     .apiKey("YOUR_API_KEY")
                     .build();
-
+        
                 // 创建聊天完成请求
                 ChatCompletionCreateParams request = ChatCompletionCreateParams.builder()
                     .model("glm-4.7")
@@ -201,40 +189,39 @@ title: "平台介绍"
                     .temperature(0.6f)
                     .maxTokens(1024)
                     .build();
-
+        
                 // 发送请求
                 ChatCompletionResponse response = client.chat().createChatCompletion(request);
-
+        
                 // 获取回复
                 System.out.println(response.getData().getChoices().get(0).getMessage());
             }
         }
         ```
       </Tab>
-
       <Tab title="Python SDK(旧)">
         **安装 SDK**
 
-        ```bash  theme={null}
+        ```bash
         # 安装最新版本
         pip install zhipuai
-
+        
         # 或指定版本
         pip install zhipuai==2.1.5.20250726
         ```
 
         **验证安装**
 
-        ```python  theme={null}
+        ```python
         import zhipuai
         print(zhipuai.__version__)
         ```
 
         **使用示例**
 
-        ```python  theme={null}
+        ```python
         from zhipuai import ZhipuAI
-
+        
         client = ZhipuAI(api_key="YOUR_API_KEY")
         response = client.chat.completions.create(
             model="glm-4.7",
@@ -261,7 +248,7 @@ title: "平台介绍"
 <Card title="流式输出" icon={<svg style={{maskImage: "url(/resource/icon/water.svg)", maskRepeat: "no-repeat", maskPosition: "center center",}} className={"h-6 w-6 bg-primary dark:bg-primary-light !m-0 shrink-0"}/>}>
   启用流式输出，获得更自然的对话体验。
 
-  ```json  theme={null}
+  ```json
   {
       "model": "glm-4.7",
       "messages": [
@@ -278,7 +265,7 @@ title: "平台介绍"
 <Card title="多模态输入" icon={<svg style={{maskImage: "url(/resource/icon/images.svg)", maskRepeat: "no-repeat", maskPosition: "center center",}} className={"h-6 w-6 bg-primary dark:bg-primary-light !m-0 shrink-0"}/>}>
   使用 GLM-4.6V 模型处理图像和文本的混合输入。
 
-  ```json  theme={null}
+  ```json
   {
       "model": "glm-4.6v",
       "messages": [
@@ -305,7 +292,7 @@ title: "平台介绍"
 <Card title="函数调用" icon={<svg style={{maskImage: "url(/resource/icon/function.svg)", maskRepeat: "no-repeat", maskPosition: "center center",}} className={"h-6 w-6 bg-primary dark:bg-primary-light !m-0 shrink-0"}/>}>
   使用函数调用功能，让模型调用您定义的函数。
 
-  ```json  theme={null}
+  ```json
   {
       "model": "glm-4.7",
       "messages": [
@@ -351,24 +338,22 @@ title: "平台介绍"
   <Accordion title="如何处理API调用错误？">
     当 API 调用出现错误时，服务器会返回相应的 HTTP 状态码和错误信息。常见的错误包括：
 
-    * **401 Unauthorized**: API Key 无效或已过期
-    * **400 Bad Request**: 请求参数错误
-    * **429 Too Many Requests**: 超出 API 调用频率限制
-    * **500 Internal Server Error**: 服务器内部错误
+    - **401 Unauthorized**: API Key 无效或已过期
+    - **400 Bad Request**: 请求参数错误
+    - **429 Too Many Requests**: 超出 API 调用频率限制
+    - **500 Internal Server Error**: 服务器内部错误
 
     建议实现适当的错误处理和重试机制，特别是对于 429 和 500 错误。
   </Accordion>
-
   <Accordion title="如何优化API调用成本？">
     以下是一些优化 API 调用成本的建议：
 
     1. 选择适合任务的模型，不同模型的价格不同
     2. 减少不必要的上下文信息，降低 token 消耗
     3. 使用缓存机制，避免重复调用
-    4. 设置合理的 max\_tokens 参数，避免生成过长的回复
+    4. 设置合理的 max_tokens 参数，避免生成过长的回复
     5. 在开发阶段使用较小的模型进行测试
   </Accordion>
-
   <Accordion title="如何处理长文本输入？">
     对于超过模型上下文窗口大小的长文本，可以采用以下策略：
 
@@ -380,5 +365,5 @@ title: "平台介绍"
 </AccordionGroup>
 
 <Tip>
-  如果您在使用过程中遇到任何问题，可以查阅 [完整文档](/cn/faq/api-code) 或联系我们的 [技术支持](https://bigmodel.cn/online-book/customerService) 。
+  如果您在使用过程中遇到任何问题，可以查阅 [完整文档](/cn/faq/api-code) 或联系我们的 [技术支持](https://bigmodel.cn/online-book/customerService) 。\`
 </Tip>
