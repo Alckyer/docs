@@ -27,7 +27,9 @@
         "groups": [
           {
             "group": "模型API",
-            "pages": []
+            "pages": [
+              "api-reference/openapi.json"
+            ]
           }
         ]
       },
