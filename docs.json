@@ -31,7 +31,7 @@
           {
             "group": "开发工具接入",
             "pages": [
-              "claude"
+              "develop/claude"
             ]
           }
         ]
