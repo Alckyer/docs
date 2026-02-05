@@ -50,6 +50,12 @@
       }
     ]
   },
+  "contextual": {
+    "options": [
+     "copy",
+     "view"
+   ]
+  },
   "footer": {
     "socials": {
       "x": "https://x.com/mintlify",
