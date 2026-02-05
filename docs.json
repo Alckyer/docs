@@ -9,10 +9,10 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "groups": [
+    "tabs": [
       {
-        "group": "使用指南",
-        "pages": [
+        "tab": "使用指南",
+        "groups": [
           {
             "group": "开始使用",
             "pages": [
@@ -22,12 +22,11 @@
         ]
       },
       {
-        "group": "API文档",
-        "pages": []
+        "tab": "API文档"
       },
       {
-        "group": "场景示例",
-        "pages": [
+        "tab": "场景示例",
+        "groups": [
           {
             "group": "开发工具接入",
             "pages": [
