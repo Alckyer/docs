@@ -23,7 +23,10 @@
         ]
       },
       {
-        "tab": "API文档"
+        "tab": "API文档",
+        "pages": [
+          "api/introduction"
+        ]
       },
       {
         "tab": "场景示例",
