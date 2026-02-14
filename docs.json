@@ -81,7 +81,8 @@
         "label": "Support",
         "href": "mailto:hi@mintlify.com"
       }
-    ]
+    ],
+    "languageToggle": true
   },
   "contextual": {
     "options": [
