@@ -2,13 +2,6 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
   "name": "Mint Starter Kit",
-  "i18n": {
-    "default": "zh",
-    "languages": [
-      { "locale": "zh", "name": "简体中文" },
-      { "locale": "en", "name": "English" }
-    ]
-  },
   "colors": {
     "primary": "#0052d9",
     "light": "#618dff",
@@ -23,48 +16,104 @@
   "css": "/custom.css",
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "使用指南",
-        "groups": [
+        "language": "zh",
+        "default": true,
+        "tabs": [
           {
-            "group": "开始使用",
-            "pages": [
-              "start/introduction",
-              "start/model-overview",
-              "start/quick-start"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API文档",
-        "groups": [
-          {
-            "group": "API指引",
-            "pages": [
-              "api/introduction",
-              "api/rate-limit"
+            "tab": "使用指南",
+            "groups": [
+              {
+                "group": "开始使用",
+                "pages": [
+                  "start/introduction",
+                  "start/model-overview",
+                  "start/quick-start"
+                ]
+              }
             ]
           },
           {
-            "group": "模型API",
-            "pages": [
-              "api/model-api/get-plants",
-              "api/model-api/post-plants",
-              "api/model-api/delete-plant"
+            "tab": "API文档",
+            "groups": [
+              {
+                "group": "API指引",
+                "pages": [
+                  "api/introduction",
+                  "api/rate-limit"
+                ]
+              },
+              {
+                "group": "模型API",
+                "pages": [
+                  "api/model-api/get-plants",
+                  "api/model-api/post-plants",
+                  "api/model-api/delete-plant"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "场景示例",
+            "groups": [
+              {
+                "group": "开发工具接入",
+                "pages": [
+                  "develop/claude",
+                  "develop/claude-for-ide"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        "tab": "场景示例",
-        "groups": [
+        "language": "en",
+        "tabs": [
           {
-            "group": "开发工具接入",
-            "pages": [
-              "develop/claude",
-              "develop/claude-for-ide"
+            "tab": "Guide",
+            "groups": [
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "en/start/introduction",
+                  "en/start/model-overview",
+                  "en/start/quick-start"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "API Docs",
+            "groups": [
+              {
+                "group": "API Guide",
+                "pages": [
+                  "en/api/introduction",
+                  "en/api/rate-limit"
+                ]
+              },
+              {
+                "group": "Model API",
+                "pages": [
+                  "en/api/model-api/get-plants",
+                  "en/api/model-api/post-plants",
+                  "en/api/model-api/delete-plant"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Examples",
+            "groups": [
+              {
+                "group": "IDE Integration",
+                "pages": [
+                  "en/develop/claude",
+                  "en/develop/claude-for-ide"
+                ]
+              }
             ]
           }
         ]
@@ -81,8 +130,7 @@
         "label": "Support",
         "href": "mailto:hi@mintlify.com"
       }
-    ],
-    "languageToggle": true
+    ]
   },
   "contextual": {
     "options": [
