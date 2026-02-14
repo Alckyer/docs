@@ -7,6 +7,13 @@
     "light": "#618dff",
     "dark": "#002a7c"
   },
+  "api": {
+    "playground": {
+      "mode": "show"
+    }
+  },
+  "openapi": "api/openapi.json",
+  "css": "/custom.css",
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
@@ -17,6 +24,7 @@
             "group": "开始使用",
             "pages": [
               "start/introduction",
+              "start/model-overview",
               "start/quick-start"
             ]
           }
@@ -26,8 +34,19 @@
         "tab": "API文档",
         "groups": [
           {
+            "group": "API指引",
+            "pages": [
+              "api/introduction",
+              "api/rate-limit"
+            ]
+          },
+          {
             "group": "模型API",
-            "openapi": "api-reference/openapi.json"
+            "pages": [
+              "api/model-api/get-plants",
+              "api/model-api/post-plants",
+              "api/model-api/delete-plant"
+            ]
           }
         ]
       },
@@ -37,7 +56,8 @@
           {
             "group": "开发工具接入",
             "pages": [
-              "develop/claude"
+              "develop/claude",
+              "develop/claude-for-ide"
             ]
           }
         ]

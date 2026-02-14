@@ -3,14 +3,14 @@ title: "平台介绍"
 description: "FCLOUD API · 一站式大模型开发平台"
 ---
 <Frame>
-  <img className="block dark:hidden" src="https://cdn.bigmodel.cn/static/logo/dark.svg" alt="智谱AI开放平台" />
+  <img className="block dark:hidden img-h25" src="https://download.fcloud.net/directlink/2/api-docs/logo-dark.svg" alt="节点跃迁AI开放平台" />
 
-  <img className="hidden dark:block" src="https://cdn.bigmodel.cn/static/logo/light.svg" alt="智谱AI开放平台" />
+  <img className="hidden dark:block img-h25" src="https://download.fcloud.net/directlink/2/api-docs/logo-light.svg" alt="节点跃迁AI开放平台" />
 </Frame>
 
 ## 平台定位
 
-智谱大模型开放平台 [fcloud.net](https://www.fcloud.net)，提供功能丰富、灵活易用、高性价比的大模型 API 服务，支持智能体开发与模型精调、推理、评测等，致力于构建高效通用的“一站式模型即服务” AI 开发新范式。
+节点跃迁大模型开放平台 [fcloud.net](https://www.fcloud.net)，提供功能丰富、灵活易用、高性价比的大模型 API 服务，支持智能体开发与模型精调、推理、评测等，致力于构建高效通用的 “一站式模型即服务” AI 开发新范式。
 
 ## 平台优势
 
@@ -38,19 +38,19 @@ description: "FCLOUD API · 一站式大模型开发平台"
 
 ## 极速体验
 
-您可前往智谱大模型 [体验中心](https://bigmodel.cn/trialcenter/modeltrial)，极速体验模型能力。
+您可前往节点跃迁大模型 [操练场](https://www.fcloud.net/console/playground)，极速体验模型能力。
 
 <Tip>
   在对话框输入相关参数及prompt，点击发送，即可看到对应模型所输出的结果。
 
-  ![](https://cdn.bigmodel.cn/static/logo/introduction.png)
+  ![](https://download.fcloud.net/directlink/2/api-docs/ScreenShot_2026-02-06_162841_085.png)
 
   点击页面左侧的按钮，可自由切换体验文本模态、多模态模型及数十种智能体。
 </Tip>
 
 ## 快速开始
 
-[快速开始](/cn/guide/start/quick-start) 将引导您逐步完成 API 调用流程，涵盖注册账号、环境配置、获取 API key、SDK 使用等关键步骤。帮助您分钟级完成模型调用服务，并集成到您的业务或应用中。
+[快速开始](/start/quick-start) 将引导您逐步完成 API 调用流程，涵盖注册账号、环境配置、获取 API key、SDK 使用等关键步骤。帮助您分钟级完成模型调用服务，并集成到您的业务或应用中。
 
 ## 开发指南
 
@@ -81,16 +81,10 @@ description: "FCLOUD API · 一站式大模型开发平台"
 ## 核心概念
 
 <Tabs>
-  <Tab title="GLM">
-    <Card title="GLM - General Language Model" icon={<svg style={{maskImage: "url(/resource/icon/brain.svg)", maskRepeat: "no-repeat", maskPosition: "center center",}} className={"h-6 w-6 bg-primary dark:bg-primary-light !m-0 shrink-0"}/>}>
-      GLM 是一款基于自回归填空的预训练语言模型。ChatGLM 系列模型，支持相对复杂的自然语言指令，并且能够解决困难的推理类问题。该模型配备了易于使用的 API 接口，允许开发者轻松将其融入各类应用，广泛应用于智能客服、虚拟主播、聊天机器人等诸多领域。
-    </Card>
-  </Tab>
-
   <Tab title="Token">
     <Card title="Token - 文本处理单位" icon={<svg style={{maskImage: "url(/resource/icon/coins.svg)", maskRepeat: "no-repeat", maskPosition: "center center",}} className={"h-6 w-6 bg-primary dark:bg-primary-light !m-0 shrink-0"}/>}>
       Token 是模型用来表示自然语言文本的基本单位，可以直观的理解为“字”或“词”；通常 1 个中文词语、1 个英文单词、1 个数字或 1 个符号计为 1 个 token。
-      GLM 系列模型中 token 和字数的换算比例约为 1:1.6 ，但因为不同模型的分词不同，所以换算比例也存在差异，每一次实际处理 token 数量以模型返回为准，您可以从返回结果的 usage 中查看。
+      大多数模型中 token 和字数的换算比例约为 1:1.6 - 2 ，但因为不同模型的分词不同，所以换算比例也存在差异，每一次实际处理 token 数量以模型返回为准，您可以从返回结果的 usage 中查看。
     </Card>
   </Tab>
 
@@ -100,7 +94,7 @@ description: "FCLOUD API · 一站式大模型开发平台"
 
       * 用户输入的内容
       * 模型生成的回复
-      * 模型在生成回复过程中进行推理或调用工具时产生的中间内容（如：GLM-4-AllTools ）
+      * 模型在生成回复过程中进行推理或调用工具时产生的中间内容（如：claude-opus-4-5-thinking ）
 
       <br />
 

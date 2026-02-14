@@ -1,0 +1,22 @@
+h5 {
+    font-size: 14px!important;
+}
+
+/* Send Request 按钮 */
+button[class*="SendButton"],
+button[class*="send-button"],
+.api-playground button[type="submit"],
+[data-testid="send-button"],
+.tryit-button {
+  background-color: #0052d9 !important;
+  border-color: #0052d9 !important;
+}
+
+/* 通用主按钮样式 */
+.primary-button,
+button.primary {
+  background-color: #0052d9 !important;
+  border-color: #0052d9 !important;
+}
+
+.img-h25{height: 25px;}
