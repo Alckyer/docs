@@ -2,6 +2,13 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
   "name": "Mint Starter Kit",
+  "i18n": {
+    "default": "zh",
+    "languages": [
+      { "locale": "zh", "name": "简体中文" },
+      { "locale": "en", "name": "English" }
+    ]
+  },
   "colors": {
     "primary": "#0052d9",
     "light": "#618dff",
